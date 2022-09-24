@@ -64,4 +64,11 @@ void setup()
 void loop()
 {
   // put nyour main code here, to run repeatedly:
+  for (int i = 0; i < 8; i++)
+  {
+    LC.setRow(0, i, hf[i]);
+  }
+  delay(1000);
+  for (int x = 0; x < MAX_DEVICES; x++)
+    LC.clearDisplay(x);
 }
