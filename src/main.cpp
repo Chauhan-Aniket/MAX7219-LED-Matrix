@@ -64,9 +64,28 @@ void setup()
 void loop()
 {
   // put nyour main code here, to run repeatedly:
+  // happy face
   for (int i = 0; i < 8; i++)
   {
     LC.setRow(0, i, hf[i]);
+  }
+  delay(1000);
+  for (int x = 0; x < MAX_DEVICES; x++)
+    LC.clearDisplay(x);
+
+  // neutral face
+  for (int i = 0; i < 8; i++)
+  {
+    LC.setRow(1, i, nf[i]);
+  }
+  delay(1000);
+  for (int x = 0; x < MAX_DEVICES; x++)
+    LC.clearDisplay(x);
+
+  // sad face
+  for (int i = 0; i < 8; i++)
+  {
+    LC.setRow(2, i, sf[i]);
   }
   delay(1000);
   for (int x = 0; x < MAX_DEVICES; x++)
