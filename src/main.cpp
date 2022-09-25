@@ -90,4 +90,16 @@ void loop()
   delay(1000);
   for (int x = 0; x < MAX_DEVICES; x++)
     LC.clearDisplay(x);
+
+  // letter A in all display
+  for (int j = MAX_DEVICES - 1; j >= 0; j--)
+  {
+    for (int i = 0; i < 8; i++)
+    {
+      LC.setRow(j, i, A[i]);
+    }
+  }
+  delay(1000);
+  for (int x = 0; x < MAX_DEVICES; x++)
+    LC.clearDisplay(x);
 }
